@@ -1,0 +1,33 @@
+a {
+    font-size: 1.5rem;
+}
+
+ul {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.bck {
+    background-color: yellow;
+}
+
+#border {
+    border: 4px solid purple;
+    color: red;
+}
+
+.bckblue{
+    background-color: #437dd9;
+}
+
+.bckgreen {
+    background-color: green;
+}
+
+.colorred {
+    color: red;
+}
