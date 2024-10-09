@@ -1,0 +1,120 @@
+/* .intro sinifini secir */
+.intro {
+    color: blue;
+    font-weight: bold;
+    
+}
+
+/* name1 ve name2 siniflerini dasiyan elementi secir */
+.name1.name2 {
+    background-color: lightgreen;
+    
+}
+
+/* name1 sinifinin daxilindeki name2 sinifini secir */
+.name1 .name2 {
+    background-color: lightblue;
+    
+}
+
+/* ID ile firstname elementini secir */
+#firstname {
+    background-color: yellow;
+}
+
+/* Butun elementleri secir */
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Butun p elementlerini secir */
+p {
+    color: black;
+    
+}
+
+/* element.class sekliyle p elementlerini secir (class="intro" olanlar) */
+p.intro {
+    font-size: 16px;
+}
+
+/* div ve p elementlerini secir */
+div, p {
+    border: 1px solid black; /* Qara sərhəd */
+}
+
+/* div-in içindəki p elementlerini secir */
+div p {
+    color: green;
+}
+
+/* div-in birbaşa altinda olan p elementlerini secir */
+div > p {
+    background-color: lightyellow;
+}
+
+/* div-dən dərhal sonra gələn p elementini secir */
+div + p {
+    font-style: italic; 
+}
+
+/* p elementinin ardinca gelen ul elementlerini secir */
+p ~ ul {
+    font-size: large;
+}
+
+/* İkinci uşaq p elementini secir */
+p:nth-child(2) {
+    font-weight: bold; 
+}
+
+/* Sonuncu ikinci uşaq p elementini secir */
+p:nth-last-child(2) {
+    color: red; 
+}
+
+/* Sonuncu p elementini secir */
+p:nth-last-of-type(1) {
+    color: brown; 
+}
+
+/* Yeganə p elementini secir (parentin yeganə p elementi) */
+p:only-of-type {
+    font-weight: bold; 
+    color: purple; 
+}
+
+/* Yeganə uşaq olan p elementini secir */
+p:only-child {
+    border: 2px solid red; 
+}
+
+/* Hover zamani link rengini deyishir */
+a:hover {
+    color: orange; 
+}
+
+/* [type="text"] - type="text" olan bütün input elementlərini secir */
+input[type="text"] {
+    border: 1px solid blue; 
+}
+
+/* :first-child - valideynin ilk uşağı olan p elementini secir */
+p:first-child {
+    font-weight: bold; 
+    color: green; 
+}
+
+/* [href^="https://"] - href atributu "https://" ilə başlayan bütün linkləri secir */
+a[href^="https://"] {
+    color: purple; 
+    
+}
+
+/* div:nth-of-type(3) - valideynin üçüncü div elementini secir */
+div:nth-of-type(3) {
+    background-color: lightcoral; 
+    
+}
+
