@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Fjalla One", sans-serif;
+}
+
+.fjalla-one-regular {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+
+    font-style: normal;
+  }
+  
+.mainbox{
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;       
+    text-align: center;
+}
+
+.box p{
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-top: 20px;    
+}
+
+.box h1{
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+}
+
+.box{
+    border-radius: 5px;
+    width: 15vw; 
+    height: 40vh;
+    border: 1px solid black;
+    margin: auto auto;
+}
+
+.box button{
+        width: 200px;
+        margin-top: 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+}
+
+.box i{
+    margin-top: 30px;
+    font-size: 60px;
+
+}
+
+.box.box2:hover{
+    transition: 1s;
+    color: white;
+    border: none;
+    background-color: #e2306c;
+}
+
+.box.box2 button:hover{
+    transition: 1s;
+    background-color: white;
+    color: #b99ea7;
+}
