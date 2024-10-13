@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer-container{
+    height: 200vh;
+    position: relative;
+    
+}
+
+.container{
+    border: 2px solid olivedrab;
+    background-color: blanchedalmond;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+}
+.box{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+}
+
+.box.red{
+    background-color: red;
+    left:20px;
+    top: 20px;
+}
+
+.yellow{
+    background-color: yellow;
+    top: 70px;
+    left: 70px;
+}
+
+.brown{
+    background-color: brown;
+    left: 40px;
+    top: 40px;
+    opacity: 70%;
+}
+
+.box.orange{
+    position: sticky;
+    background-color: orange;
+    top: 0;
+    left: 100%;
+    
+    
+    
+}
+
+.green{
+    background-color: green;
+    top: 320px;
+    left: 350px;
+}
+
+.fixed-box.red{
+    position: fixed;
+    right: 0;
+    background-color: red;
+    width: 70px;
+    height: 70px;
+}
