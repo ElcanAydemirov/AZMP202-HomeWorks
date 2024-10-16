@@ -37,8 +37,8 @@ body{
 
 .box{
     border-radius: 5px;
-    width: 15vw; 
-    height: 40vh;
+    width: 20vw; 
+    height: 80vh;
     border: 1px solid black;
     margin: auto auto;
 }
@@ -60,14 +60,14 @@ body{
 
 }
 
-.box.box2:hover{
+.box:hover{
     transition: 1s;
     color: white;
     border: none;
     background-color: #e2306c;
 }
 
-.box.box2 button:hover{
+.box button:hover{
     transition: 1s;
     background-color: white;
     color: #b99ea7;
