@@ -1,0 +1,167 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .nav {
+    border-bottom: 2px solid black;
+    max-width: 1200px;
+  }
+  
+  header {
+    background-color: #212529;
+  }
+  
+  .about {
+    text-align: center;
+    background-color: #f8f9fa;
+  }
+  
+  .about h1 {
+    padding: 100px 250px;
+    font-size: 2rem;
+  }
+  
+  .head-bottom {
+    margin-top: 200px;
+    margin: 0 auto;
+  }
+  
+  .main {
+    background-color: #f8f9fa;
+  }
+  
+  .col-6.lists {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .col-6.lists ul {
+    display: flex;
+  }
+  
+  .col-6.lists ul li a {
+    margin-right: 50px;
+    font-size: 1rem;
+    color: grey;
+  }
+  
+  .col-6.logo h1 {
+    font-size: 2rem;
+    color: aliceblue;
+  }
+  
+  .head-bottom .col-6 h1 {
+    color: azure;
+    font-size: 4rem;
+  }
+  
+  .head-bottom .col-6 p {
+    margin: 30px 0 60px 0;
+    color: grey;
+    font-size: 1.5rem;
+  }
+  
+  .head-bottom .col-6.left a {
+    border-radius: 8px;
+    background-color: #0d6efd;
+    padding: 20px;
+    margin-top: 50px;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .col-6.right .box600-400 img {
+    margin-top: 120px;
+    width: 400px;
+    height: 250px;
+    background-color: #343a40;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col-6.right div span {
+    width: 600px;
+    height: 400px;
+    background-color: #343a40;
+    margin-bottom: 120px;
+  }
+  
+  .col-4.left h1 {
+    font-size: 3rem;
+    color: #212529;
+  }
+  
+  .col-8.right i {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 2rem;
+    background-color: #267dfd;
+  }
+  
+  .col-4.foot {
+    background-color: #ffffff;
+  }
+  
+  .col-4.foot img {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .col-4.foot .footspantop {
+    background-color: #0d6efd;
+    padding: 3px;
+    border-radius: 8px;
+  }
+  
+  #img40-40 {
+    width: 40px;
+    height: 40px;
+  
+    border-radius: 50%;
+  }
+  
+  .foottexts {
+    display: flex;
+  }
+  
+  .foottexts p {
+    margin-left: 10px;
+    margin-top: 12px;
+  }
+  
+  .bottomplace .col-6 form span {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .bottomplace .col-6 button {
+    position: absolute;
+    right: 0;
+  }
+  
+  .bottomplace .col-6 input {
+    padding: 0 50px 0 10px;
+    background-color: white;
+    border-radius: 4px;
+    width: 300px;
+  }
+  
+  .btnemail {
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .bottomplace {
+    background-color: #1c77fd;
+    margin-bottom: 40px;
+    border-radius: 10px;
+  }
+  
