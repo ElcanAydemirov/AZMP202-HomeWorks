@@ -41,6 +41,7 @@ body{
     height: 80vh;
     border: 1px solid black;
     margin: auto auto;
+    transition: 1s;
 }
 
 .box button{
@@ -52,6 +53,7 @@ body{
         padding: 10px;
         border-radius: 20px;
         cursor: pointer;
+        transition: 1s;
 }
 
 .box i{
@@ -61,14 +63,12 @@ body{
 }
 
 .box:hover{
-    transition: 1s;
     color: white;
     border: none;
     background-color: #e2306c;
 }
 
-.box button:hover{
-    transition: 1s;
+.box:hover button{
     background-color: white;
     color: #b99ea7;
 }
