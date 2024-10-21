@@ -1,4 +1,4 @@
-#section3 .boxes{
+#section3 .boxes {
 
     margin: 0 60px;
     display: grid;
@@ -13,7 +13,7 @@
     grid-template-columns: auto auto auto;
 }
 
-#section5 .boxes{
+#section5 .boxes {
     margin: 0 60px;
     display: grid;
     justify-content: space-between;
@@ -22,7 +22,7 @@
 }
 
 
-#section6 .box{
+#section6 .box {
     display: grid;
     grid-template-columns: 18% 18% 18% 18% 18%;
     margin: 60px;
@@ -51,58 +51,61 @@
 
 
 
-#section10 .container .footer{
+#section10 .container .footer {
     display: grid;
     grid-template-columns: 1fr 2fr 3fr;
     gap: 20px;
 }
 
 @media only screen and (max-width: 1023px) {
-    #section5 .boxes{
+    #section5 .boxes {
         grid-template-columns: 47% 47%;
     }
 
-    #section7 .container .boxes{
+    #section7 .container .boxes {
         grid-template-columns: 32% 32% 32%;
     }
-    #section9 .container .images img{
+
+
+
+    #section9 .container .images img {
         width: 100px;
     }
 
 }
 
 @media only screen and (max-width: 763px) {
-    #section3 .boxes{
+    #section3 .boxes {
         grid-template-columns: 100%;
     }
-    
+
     #section4 .images {
         grid-template-columns: 100%;
     }
 
-    #section5 .boxes{
+    #section5 .boxes {
         grid-template-columns: 100%;
     }
-    #section6 .box{
+
+    #section6 .box {
         grid-template-columns: 30% 30% 30%;
         gap: 30px;
     }
 
-    #section6 .box .numbersandtexts h2
-    {
+    #section6 .box .numbersandtexts h2 {
         font-size: 2rem;
     }
 
-    #section6 .box .numbersandtexts p{
+    #section6 .box .numbersandtexts p {
         font-size: 0.5rem;
-        
+
     }
 
-    #section7 .container .boxes{
+    #section7 .container .boxes {
         grid-template-columns: 100%;
     }
 
-    #section8 .cards{
+    #section8 .cards {
         grid-template-columns: 100%;
     }
 
@@ -111,23 +114,22 @@
 
     }
 
-    #section9 .container .images img{
+    #section9 .container .images img {
         width: 40px;
     }
 
-    #section10 .container .footer{
+    #section10 .container .footer {}
 
-    }
-    .container .Texts{
+    .container .Texts {
         grid-template-columns: 100%;
-        
+
     }
 
     .container .Texts h1 {
         font-size: 1.5rem;
     }
 
-    #section2 .HeadingTexts h1{
+    #section2 .HeadingTexts h1 {
         font-size: 2.5rem;
     }
 
@@ -135,15 +137,12 @@
         background-color: aqua;
     }
 
-    #section1 .headertop ul li .visible {
-        display: block;
-
+    #section1 .headertop .visible {
+        display: flex;
+        justify-content: end;
     }
 
-    #section1 ul li a{
-        
+    #section1 ul li a {
         display: none;
     }
-
-    
 }
