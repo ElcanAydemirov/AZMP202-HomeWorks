@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #212529;
+}
+
+#section4{
+    background-color: #F8F9FA;
+}
+
+#section2 .btn{
+
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+
+#section2 .btn.btn-outline-secondary{
+    color: #fff;
+}
+
+#section2 .btn.btn-outline-secondary:hover{
+    background-color: #fff;
+    color: #212529;
+}
+
+.card-price{
+    font-size: 4rem;
+    display: flex;
+    justify-content: start;
+}
+
+.period{
+    margin-top: 48px;
+    font-size: 1rem;
+}
+
+.fa-regular.fa-envelope{
+    color: #F8F9FA;
+    background-color: #297FFD;
+    padding: 15px;
+    font-size: 2rem;
+    border-radius: 8px;
+}
+
+#section5 .fa-solid.fa-message{
+    font-size: 2.5rem;
+    margin-left: 20px;
+}
+
+#section6 .inputlar input,#section6 .inputlar button{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#section6 .inputlar button{
+    margin-bottom: 100px;
+}
+
+#section6 .inputlar textarea{
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 30px;
+}
+
+
+#section1 .container-fluid{
+    height: 100%;
+}
+
+@media (max-width: 992px) { 
+
+    .navbar-nav a{
+        display: none;
+    }
+
+  
+ }
+
+ @media (max-width: 767px){
+
+ #section2 .btn{
+
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+}
+
