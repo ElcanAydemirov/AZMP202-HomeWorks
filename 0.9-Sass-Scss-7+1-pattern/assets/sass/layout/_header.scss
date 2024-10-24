@@ -1,0 +1,30 @@
+header{
+    background-color: $bg-color1;
+    .header{
+
+        
+        @include flexbox(space-between,center);
+        padding: 1.5rem 1rem;
+        nav{  
+            @include flexgap(60px);
+            @include for_phone_only{
+                display: none
+            }
+        }
+        button{
+            @extend %first-btn;
+            @include for_phone_only{
+                display: none
+            }
+        }
+
+        .menu{
+            display: none;
+            @include for_phone_only{
+                display: block;
+                padding-right: 1rem;
+
+            }
+        }
+    }
+}

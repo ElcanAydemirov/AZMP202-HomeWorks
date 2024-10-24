@@ -1,0 +1,57 @@
+#banner{
+    background-color: $bg-color1;
+    .banner{
+        .row{
+            @include for_phone_only{
+                flex-direction: column-reverse;
+            }
+            h5{
+
+                color: $orange;
+            }
+
+            .col-6{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 1rem;
+
+                .btns{
+                    .btn1{
+                        @extend %second-btn;
+                    }
+
+                    .btn2{
+                        @extend %third-btn;
+                            
+                        
+                    }
+    
+                }
+            }
+
+            
+
+            .positionh1{
+                position: relative;
+                img{
+                    position: absolute;
+                    top:0;
+                    right: 20px;
+                }
+                h1{
+                    position: relative;
+                    z-index: 1;
+                    @include for_phone_only{
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+        .contentbottom{
+            display: flex;
+            column-gap: 15px;
+            margin-top: 70px;
+        }
+    }
+}
