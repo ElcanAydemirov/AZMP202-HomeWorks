@@ -1,0 +1,36 @@
+#contactus {
+    background-color: $bg-color2;
+
+    .contactus {
+        .row {
+
+            padding: 1.5rem;
+            background-color: $orange;
+            border-radius: 8px;
+
+            @include for_phone_only {
+                flex-direction: column-reverse;
+            }
+
+            .col-6 {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                padding: 0 2rem;
+
+                h1 {
+                    @include for_phone_only {
+                        font-size: 3rem
+                    }
+                }
+
+                button {
+                    @extend %fourth-btn;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

@@ -1,13 +1,22 @@
-#works{
+#works {
     background-color: $bg-color2;
-    .works{
+
+    .works {
 
 
-        .row{
-            padding: 3rem 0;
+        .row {
+            padding: 3rem;
+
+            @include for_phone_only {
+                gap: 20px;
+            }
         }
-        .col-4{
-            border: 1px solid $border-color;
-        }
+    }
+
+    .col-4 {
+        border: 1px solid $border-color;
+        padding: 1rem 2rem;
+
+
     }
 }

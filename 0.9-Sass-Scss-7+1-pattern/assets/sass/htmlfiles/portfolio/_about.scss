@@ -5,13 +5,16 @@
         .row {
             display: flex;
             justify-content: center;
-            @include for_tablet_only{
+
+            @include for_tablet_only {
                 display: flex;
                 justify-content: center;
             }
+
             .col-6 {
 
                 ul {
+                    margin-top: 20px;
                     display: flex;
                     gap: 30px;
 
@@ -30,10 +33,12 @@
     .grid {
         .col-12 {
             position: relative;
+
             img {
                 width: 100%;
             }
-            .texts{
+
+            .texts {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
@@ -41,17 +46,20 @@
                 left: 100px;
                 bottom: 80px;
 
-                @include for_phone_only{
+                @include for_phone_only {
                     left: 40px;
                     bottom: 30px;
-                    h2{
+
+                    h2 {
                         font-size: 2rem;
                     }
                 }
-                h2{
+
+                h2 {
                     color: #fff;
                 }
-                span{
+
+                span {
                     color: black;
                     background-color: #fff;
                     width: 122px;
@@ -60,8 +68,8 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    
-                    @include for_phone_only{
+
+                    @include for_phone_only {
                         width: 82px;
                         height: 28px;
                         font-size: 0.8rem;
@@ -74,44 +82,51 @@
             img {
                 width: 100%;
             }
+
             position: relative;
-            .texts{
+
+            .texts {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
                 position: absolute;
                 left: 70px;
                 bottom: 60px;
-                @include for_phone_only{
+
+                @include for_phone_only {
                     left: 40px;
                     bottom: 30px;
-                    h2{
+
+                    h2 {
                         font-size: 1rem;
                     }
                 }
-                h2{
+
+                h2 {
                     color: #fff;
                     font-size: 3rem;
-                    @include for_phone_only{
-                        font-size: 2rem
-                        ;
+
+                    @include for_phone_only {
+                        font-size: 2rem;
                     }
                 }
-                span{
+
+                span {
                     color: black;
                     background-color: #fff;
-                    width: 70px;
-                    height: 23px;
+                    width: 100px;
+                    height: 30px;
                     border-radius: 10px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    @include for_phone_only{
+
+                    @include for_phone_only {
                         width: 82px;
                         height: 28px;
                         font-size: 0.8rem;
                     }
-                    
+
                 }
             }
         }

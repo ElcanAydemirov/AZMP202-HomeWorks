@@ -5,42 +5,42 @@
 
         .row {
             justify-content: space-between;
-            @include for_tablet_only{
-               
-                
+
+            @include for_tablet_only {}
+
+            @include for_phone_only {
+                align-items: center;
+            }
+
+            h2 {
+                @include for_phone_only {
+                    font-size: 40px;
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+
+                button {
+                    @extend %fourth-btn;
+
+                }
 
             }
-            @include for_phone_only{
-                    align-items: center;
-                    }
-                h2{
-                    @include for_phone_only{
-                    font-size: 40px;
-                    }
-                }
-                .content {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    gap: 30px;
-        
-                    button {
-                        @extend %fourth-btn;
-        
-                    }
-                    
-                }
-                img{
-                    width: 100%;
-                }
+
+            img {
+                width: 100%;
             }
         }
-
-
-
-        
-
-
-
     }
 
+
+
+
+
+
+
+}

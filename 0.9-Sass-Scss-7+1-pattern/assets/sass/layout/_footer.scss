@@ -1,0 +1,73 @@
+footer {
+    background-color: $bg-color2;
+
+    .footer {
+
+        .row {
+
+            .start {
+                display: flex;
+                justify-content: start;
+                align-items: start;
+                position: relative;
+
+                h2 {
+                    font-size: 1.5rem;
+                    position: absolute;
+                    top: -10px;
+                    left: 10px;
+                }
+            }
+
+            .col-3 {
+
+                h5 {
+                    margin-bottom: 10px;
+                    color: $orange;
+                }
+
+                ul {
+
+
+                    li {
+
+                        a {
+                            color: black;
+                        }
+                    }
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                }
+            }
+
+            .end {
+                position: relative;
+
+                @include for_phone_only {
+                    height: 80px;
+                }
+
+                img {
+                    position: absolute;
+                    right: 0;
+
+                    @include for_phone_only {
+                        left: 0;
+
+
+                    }
+
+                    @include for_tablet_only {
+                        left: 0;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+}

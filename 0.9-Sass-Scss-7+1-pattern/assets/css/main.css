@@ -1,16 +1,82 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -27,8 +93,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -36,16 +111,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -109,7 +188,7 @@ a {
   color: #391400;
 }
 
-#portfolioheader .header button, header .header button {
+header .header button {
   background-color: transparent;
   border: 1px solid #8e8f9a;
   border-radius: 7px;
@@ -148,7 +227,7 @@ a {
   background-color: #ef6d58;
 }
 
-#about .about .row .content button {
+#contactus .contactus .row .col-6 button, #about .about .row .content button {
   background-color: #fff;
   color: #391400;
   border: none;
@@ -158,10 +237,60 @@ a {
   transition: all 1.5s;
   cursor: pointer;
 }
-#about .about .row .content button:hover {
+#contactus .contactus .row .col-6 button:hover, #about .about .row .content button:hover {
   background-color: transparent;
   border: 1px solid black;
   color: black;
+}
+
+footer {
+  background-color: #fdf0e9;
+}
+footer .footer .row .start {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  position: relative;
+}
+footer .footer .row .start h2 {
+  font-size: 1.5rem;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+footer .footer .row .col-3 h5 {
+  margin-bottom: 10px;
+  color: #ef6d58;
+}
+footer .footer .row .col-3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .footer .row .col-3 ul li a {
+  color: black;
+}
+footer .footer .row .end {
+  position: relative;
+}
+@media (max-width: 767px) {
+  footer .footer .row .end {
+    height: 80px;
+  }
+}
+footer .footer .row .end img {
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 767px) {
+  footer .footer .row .end img {
+    left: 0;
+  }
+}
+@media (max-width: 1090px) {
+  footer .footer .row .end img {
+    left: 0;
+  }
 }
 
 .container {
@@ -424,8 +553,7 @@ header .header .menu {
 }
 #banner .banner .contentbottom {
   display: flex;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
   margin-top: 70px;
 }
 
@@ -435,37 +563,19 @@ header .header .menu {
 #partners .partners {
   padding: 3rem 0;
 }
-#partners .partners .partnerimages {
-  display: flex;
-  gap: 100px;
+#partners .partners .row {
   justify-content: center;
+}
+@media (max-width: 767px) {
+  #partners .partners .row {
+    justify-content: center;
+    align-items: center;
+  }
 }
 #partners .partners .row .col-12 {
   display: flex;
   gap: 20px;
   justify-content: center;
-}
-#partners .partners .row .col-12 .images {
-  display: flex;
-  gap: 20px;
-}
-#partners .partners .row .col-12 .images img {
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: 1090px) {
-  #partners .partners .row .col-12 .images img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-#partners .partners .row .col-12 .images img .mediafury img {
-  width: 50px;
-}
-#partners .margin {
-  margin-top: 3rem;
-  width: 100%;
 }
 
 #about {
@@ -498,40 +608,16 @@ header .header .menu {
   background-color: #fdf0e9;
 }
 #works .works .row {
-  padding: 3rem 0;
+  padding: 3rem;
 }
-#works .works .col-4 {
+@media (max-width: 767px) {
+  #works .works .row {
+    gap: 20px;
+  }
+}
+#works .col-4 {
   border: 1px solid #F3D1BF;
-}
-
-#portfolioheader .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 1rem;
-}
-#portfolioheader .header nav {
-  display: flex;
-  gap: 60px;
-}
-@media (max-width: 767px) {
-  #portfolioheader .header nav {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  #portfolioheader .header button {
-    display: none;
-  }
-}
-#portfolioheader .header .menu {
-  display: none;
-}
-@media (max-width: 767px) {
-  #portfolioheader .header .menu {
-    display: block;
-    padding-right: 1rem;
-  }
+  padding: 1rem 2rem;
 }
 
 #portfoliobanner {
@@ -569,6 +655,7 @@ header .header .menu {
   }
 }
 #portfolioabout .about .row .col-6 ul {
+  margin-top: 20px;
   display: flex;
   gap: 30px;
 }
@@ -653,8 +740,8 @@ header .header .menu {
 #portfolioabout .grid .col-6 .texts span {
   color: black;
   background-color: #fff;
-  width: 70px;
-  height: 23px;
+  width: 100px;
+  height: 30px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -695,4 +782,34 @@ header .header .menu {
 #portfolioabout .pageslider .row .col-4 .box:hover {
   background-color: #ef6d58;
   color: white;
+}
+
+#contactus {
+  background-color: #fdf0e9;
+}
+#contactus .contactus .row {
+  padding: 1.5rem;
+  background-color: #ef6d58;
+  border-radius: 8px;
+}
+@media (max-width: 767px) {
+  #contactus .contactus .row {
+    flex-direction: column-reverse;
+  }
+}
+#contactus .contactus .row .col-6 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 2rem;
+}
+@media (max-width: 767px) {
+  #contactus .contactus .row .col-6 h1 {
+    font-size: 3rem;
+  }
+}
+#contactus .contactus .row .col-6 button {
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */
