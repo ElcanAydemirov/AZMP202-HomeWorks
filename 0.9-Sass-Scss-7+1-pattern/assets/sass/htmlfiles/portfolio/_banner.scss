@@ -1,0 +1,16 @@
+#portfoliobanner{
+    background-color: $bg-color1;
+    .banner{
+        @include flexbox;
+        flex-direction: column;
+        gap: 20px;
+        padding: 4rem 1.5rem;
+        text-align: center;
+        h1{
+            letter-spacing:3px;
+            @include for_phone_only{
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
