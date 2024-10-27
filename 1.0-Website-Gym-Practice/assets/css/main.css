@@ -1,0 +1,385 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #77799E;
+}
+
+section {
+  padding: 120px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+  padding: 1rem;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+  padding: 1rem;
+}
+
+.col-3 {
+  width: 25%;
+  padding: 1rem;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  padding: 1rem;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+  padding: 1rem;
+}
+
+.col-6 {
+  width: 50%;
+  padding: 1rem;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+  padding: 1rem;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+  padding: 1rem;
+}
+
+.col-9 {
+  width: 75%;
+  padding: 1rem;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+  padding: 1rem;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+  padding: 1rem;
+}
+
+.col-12 {
+  width: 100%;
+  padding: 1rem;
+}
+
+.p-left-0 {
+  padding-left: 0;
+}
+
+.p-right-0 {
+  padding-right: 0;
+}
+
+@media only screen and (max-width: 1023px) {
+  .col-md-1 {
+    width: 8.3333333333%;
+    padding: 1rem;
+  }
+  .col-md-2 {
+    width: 16.6666666667%;
+    padding: 1rem;
+  }
+  .col-md-3 {
+    width: 25%;
+    padding: 1rem;
+  }
+  .col-md-4 {
+    width: 33.3333333333%;
+    padding: 1rem;
+  }
+  .col-md-5 {
+    width: 41.6666666667%;
+    padding: 1rem;
+  }
+  .col-md-6 {
+    width: 50%;
+    padding: 1rem;
+  }
+  .col-md-7 {
+    width: 58.3333333333%;
+    padding: 1rem;
+  }
+  .col-md-8 {
+    width: 66.6666666667%;
+    padding: 1rem;
+  }
+  .col-md-9 {
+    width: 75%;
+    padding: 1rem;
+  }
+  .col-md-10 {
+    width: 83.3333333333%;
+    padding: 1rem;
+  }
+  .col-md-11 {
+    width: 91.6666666667%;
+    padding: 1rem;
+  }
+  .col-md-12 {
+    width: 100%;
+    padding: 1rem;
+  }
+  .p-md-left-0 {
+    padding-left: 0;
+  }
+  .p-md-right-0 {
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .col-sm-1 {
+    width: 8.3333333333%;
+    padding: 1rem;
+  }
+  .col-sm-2 {
+    width: 16.6666666667%;
+    padding: 1rem;
+  }
+  .col-sm-3 {
+    width: 25%;
+    padding: 1rem;
+  }
+  .col-sm-4 {
+    width: 33.3333333333%;
+    padding: 1rem;
+  }
+  .col-sm-5 {
+    width: 41.6666666667%;
+    padding: 1rem;
+  }
+  .col-sm-6 {
+    width: 50%;
+    padding: 1rem;
+  }
+  .col-sm-7 {
+    width: 58.3333333333%;
+    padding: 1rem;
+  }
+  .col-sm-8 {
+    width: 66.6666666667%;
+    padding: 1rem;
+  }
+  .col-sm-9 {
+    width: 75%;
+    padding: 1rem;
+  }
+  .col-sm-10 {
+    width: 83.3333333333%;
+    padding: 1rem;
+  }
+  .col-sm-11 {
+    width: 91.6666666667%;
+    padding: 1rem;
+  }
+  .col-sm-12 {
+    width: 100%;
+    padding: 1rem;
+  }
+  .p-sm-left-0 {
+    padding-left: 0;
+  }
+  .p-sm-right-0 {
+    padding-right: 0;
+  }
+}
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  background-color: #fff;
+}
+header .header .row1 .col-4 {
+  display: flex;
+  justify-content: center;
+}
+header .header .row1 .span {
+  align-items: center;
+}
+header .header .row2 {
+  justify-content: center;
+}
+header .header .row2 ul {
+  display: flex;
+  gap: 30px;
+}
+main .bckphoto .relative {
+  position: relative;
+}
+main .bckphoto .overlay {
+  background-color: black;
+  opacity: 0.4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+main .bckphoto .image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .bckphoto .container .texts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+main .offers .row {
+  gap: 30px;
+  justify-content: center;
+}
+main .offers .row .col-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+main .offers .row .col-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 380px;
+  height: 280px;
+  gap: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(156, 15, 15, 0.25) 0px 54px 55px, rgba(187, 12, 12, 0.12) 0px -12px 30px, rgba(156, 17, 17, 0.12) 0px 4px 6px, rgba(153, 18, 18, 0.17) 0px 12px 13px, rgba(173, 18, 18, 0.09) 0px -3px 5px;
+}
+main .offers .row .col-4 img {
+  width: 70px;
+}
+
+main .calcbodymass {
+  background-color: #F6214B;
+}
+main .calcbodymass .row {
+  justify-content: center;
+}
+main .calcbodymass .row .col-8 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+main .calcbodymass .row .col-8 input {
+  padding: 11px 10px;
+  width: 30%;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #F96481;
+}
+main .calcbodymass .row .col-8 input::-moz-placeholder {
+  color: #fff;
+}
+main .calcbodymass .row .col-8 input::placeholder {
+  color: #fff;
+}
+main .calcbodymass .row .col-8 span {
+  padding: 10px 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+main .calcbodymass .row .col-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+main .calcbodymass .row .col-6 p {
+  color: #fff;
+}
+main .calcbodymass .row .col-6 h1 {
+  white-space: nowrap;
+}/*# sourceMappingURL=main.css.map */

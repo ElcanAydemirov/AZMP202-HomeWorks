@@ -1,0 +1,54 @@
+main{
+
+    .calcbodymass{
+        
+
+
+        
+        background-color: #F6214B;
+        .row{
+            justify-content: center;
+            .col-8{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                input{
+                    padding: 11px 10px;
+                    width: 30%;
+                    outline: none;
+                    background-color: transparent;
+                    color: #fff;
+                    border: 1px solid #F96481;
+                    &::placeholder {
+                        color: #fff;
+                    }
+                }
+
+                span{
+                    padding: 10px 40px;
+                    background-color: #fff;
+                    border-radius: 15px;
+                    white-space: nowrap;
+                    font-weight: 600;
+                }
+            }
+
+            .col-6{
+
+                p{
+                    color: #fff;
+                }
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                h1{
+                    white-space: nowrap;
+                }
+            }
+
+            
+        }
+    }
+}
