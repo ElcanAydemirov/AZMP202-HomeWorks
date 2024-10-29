@@ -2,6 +2,12 @@
 @import './base/reset';
 @import './base/typography';
 
+// Utils
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/helpers';
+@import './utils/functions';
+
 // Components
 @import './components/buttons';
 @import './components/carousel';
@@ -22,16 +28,13 @@
 @import './pages/banner';
 @import './pages/offers';
 @import './pages/calcbodymass';
+@import './pages/courses';
+@import './pages/revolution';
+@import './pages/schedule';
 
 // Themes
 @import './themes/theme';
 @import './themes/admin';
-
-// Utils
-@import './utils/variables';
-@import './utils/mixins';
-@import './utils/helpers';
-@import './utils/functions';
 
 // Vendors
 @import './vendors/bootstrap';

@@ -48,10 +48,17 @@ table {
   border-spacing: 0;
 }
 
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
 * {
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -281,6 +288,17 @@ header .header .row1 .col-4 {
   display: flex;
   justify-content: center;
 }
+header .header .row1 .col-4 h3 {
+  font-size: 1.1rem;
+  white-space: wrap;
+  padding: 0 4rem;
+  font-weight: 500;
+  line-height: 23px;
+}
+header .header .row1 .col-4 img {
+  width: 150px;
+  height: 40px;
+}
 header .header .row1 .span {
   align-items: center;
 }
@@ -290,6 +308,9 @@ header .header .row2 {
 header .header .row2 ul {
   display: flex;
   gap: 30px;
+}
+main .bckphoto {
+  background-image: url("http://127.0.0.1:5500/1.0-Website-Gym-Practice/assets/images/header-bg.jpg");
 }
 main .bckphoto .relative {
   position: relative;
@@ -382,4 +403,64 @@ main .calcbodymass .row .col-6 p {
 }
 main .calcbodymass .row .col-6 h1 {
   white-space: nowrap;
+}
+
+#courses .courses .row {
+  justify-content: center;
+}
+#courses .courses .row .col-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#courses .courses .row .col-8 h2 {
+  color: black;
+  white-space: nowrap;
+  font-size: 36px;
+  font-weight: 600;
+}
+#courses .courses .row .col-4 .texts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#courses .courses .row .col-4 .texts h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+#courses .courses .row .col-4 .texts .red {
+  color: red;
+}
+
+#revolution {
+  background-color: #222;
+}
+#revolution .revolution .row .col-3 img {
+  width: 100%;
+  height: 500px;
+}
+
+#schedule .schedule {
+  display: flex;
+  justify-content: center;
+}
+#schedule .schedule table, #schedule .schedule th, #schedule .schedule td {
+  border: 1px solid #DEE2E6;
+  padding: 10px 60px;
+}
+#schedule .schedule th {
+  background-color: #E9ECEF;
+  font-weight: bold;
+}
+#schedule .schedule td {
+  padding: 20px 60px;
+  color: gray;
+  font-size: 14px;
+}
+#schedule .schedule tr {
+  transition: 1s;
+}
+#schedule .schedule tr:hover {
+  background-color: #F6214B;
 }/*# sourceMappingURL=main.css.map */

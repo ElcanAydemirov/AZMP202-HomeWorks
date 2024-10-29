@@ -11,6 +11,17 @@ header{
             .col-4{
                 display: flex;
                 justify-content: center;
+                h3{
+                    font-size: 1.1rem;
+                    white-space: wrap;
+                    padding: 0 4rem;
+                    font-weight: 500;
+                    line-height: 23px;
+                }
+                img{
+                    width: 150px;
+                    height: 40px;
+                }
             }
             .span{
                 align-items: center;

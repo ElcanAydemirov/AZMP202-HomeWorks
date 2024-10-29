@@ -42,9 +42,16 @@ table {
 	border-spacing: 0;
 }
 
+.poppins-light {
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+  }
+
 *{
     list-style: none;
     text-decoration: none;
 	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
 

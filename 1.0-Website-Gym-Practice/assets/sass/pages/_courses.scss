@@ -1,0 +1,40 @@
+#courses{
+
+    .courses{
+
+        .row{
+            justify-content: center;
+            .col-8{
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                
+                h2{
+    
+                    color: black;
+                    white-space: nowrap;
+                    font-size: 36px;
+                    font-weight: 600;
+                }
+            }
+            .col-4{
+                
+                .texts{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+                    h3{
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+
+                    .red{
+                        color: red;
+                    }
+                }
+            }  
+       }
+    }
+}
