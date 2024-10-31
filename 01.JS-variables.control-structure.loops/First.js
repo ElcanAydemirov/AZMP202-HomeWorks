@@ -219,3 +219,4 @@ let averagePrice = totalPrice / products.length;
 
 console.log("Qiymetlerin cemi: " + totalPrice);
 console.log("Qiymetlerin ortalamasi: " + averagePrice);
+
