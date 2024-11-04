@@ -29,7 +29,7 @@ function move(array, currentIndex, newIndex) {
     return array;
 }
 
-console.log(move([10, 20, 30, 40, 50], 0, 2));
+console.log(move([10, 20, 30, 40, 50], 4, 0));
 
 
 //Task 3
@@ -107,6 +107,37 @@ function countWords(sentence) {
 console.log(countWords("This is a test sentence."));
 
 //Task 7
+
+function findMedian(arr) {
+    const length = arr.length;
+
+    if (length === 0) return null;
+
+    const mid = Math.floor(length / 2);
+
+    let lowerHalf = [];
+    let upperHalf = [];
+
+    for (let num of arr) {
+        if (num < arr[mid]) {
+            lowerHalf.push(num);
+        } else {
+            upperHalf.push(num);
+        }
+    }
+
+    if (length % 2 === 1) {
+
+        return upperHalf[0];
+    } else {
+
+        return (upperHalf[0] + lowerHalf[lowerHalf.length - 1]) / 2;
+    }
+}
+
+console.log(findMedian([3, 1, 2])); 
+console.log(findMedian([3, 1, 4, 2])); 
+
 
 //Task 8
 function clearDuplicate(array) {
