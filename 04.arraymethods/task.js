@@ -104,7 +104,12 @@ arr.forEach(item => {
 console.log(longestNameKey);
 
 // 7)  "name"-i en uzun olan obyektin indexin kvadratini hesablayin
+let longestNameIndex = arr.reduce((maxIndex, item, index) => {
+  return item.name.length > arr[maxIndex].name.length ? index : maxIndex;
+}, 0);
 
+let resultt = longestNameIndex ** 2;
+console.log(resultt);
 
 // 8) "name"-inin uzunlugu 4 olan obyektlerden ibaret yeni array yaradin. (filter)
 const filterNameLength = arr.filter((item) => item.name.length === 4)
