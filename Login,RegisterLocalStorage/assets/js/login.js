@@ -1,31 +1,37 @@
-import { getData,setData } from "./helpers.js"
+import { getData, setData } from "./helpers.js";
 
-const form = document.querySelector("form")
-const name = document.querySelector("#name")
-const email = document.querySelector("#name")
-const password = document.querySelector(".password")
-const submitBtn = document.querySelector(".submit")
+const form = document.querySelector("form");
+const nameOrEmail = document.querySelector(".nameOrEmail");
+const password = document.querySelector(".password");
 
-class users {
-    constructor(name,email,password) {
-        this.id = Date.now();
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.isLogged = false;
+let arr = getData("users") || []; 
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+
+    if (nameOrEmail.value.trim() === "" || password.value.trim() === "") {
+        alert("inputlar bos ola bilmez");
+        return;
     }
-}
 
-let arr = getData("users") || []
+    const user = arr.find((data) => {
+        return data;
+        
+        password.value === data.password &&
+        (nameOrEmail.value === data.email || nameOrEmail.value === data.name)
+    }
+    );
 
-form.addEventListener("submit",(e) =>{
-    e.preventDefault();
+    if (user) {
+        user.isLogged = true; 
+        setData("users", arr); 
+        location.replace("/index.html"); 
+    } else {
+        alert("Your password or name/email is incorrect");
+    }
+});
 
-    const userObj = new users(name.value,email.value,password.value)
-    arr.push(userObj);
 
-    form.reset();
-})
 
 
 

@@ -1,9 +1,12 @@
 import { getData,setData } from "./helpers.js"
 
-const formRegister = document.querySelector("form")
-const nameOrUsername = document.querySelector("#nameOrUsername")
+const formRegister = document.querySelector(".formRegister")
+const userName = document.querySelector(".userName")
+const email = document.querySelector(".email")
 const password = document.querySelector(".password")
 const submitBtn = document.querySelector(".submit")
+
+let arr = [];
 
 class users {
     constructor(name,email,password) {
@@ -15,17 +18,19 @@ class users {
     }
 }
 
-let arr = getData("users") || []
-
 formRegister.addEventListener("submit",(e) =>{
     e.preventDefault();
+    if (userName.value == "" || email.value == "" || password.value == "") {
+        alert("inputlar bos ola bilmez")
+    }else{
 
-    arr.find((data) => {
-        if (password === data.password && (nameOrUsername.value === data.email || nameOrUsername.value === data.name) ) {
-            data.isLogged = true;
-            location.replace = ("/index.html")
-        }else{
-            alert("your password or nameemail incorrect")
-        }
-    })
+    const obj = new users(userName.value,email.value,password.value)
+    arr.push(obj)
+    setData("users",arr)
+
+    }
+    this.reset();  
+    
+    
 })
+
