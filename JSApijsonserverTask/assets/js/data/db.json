@@ -1,0 +1,217 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "hashed_password",
+      "role": "user",
+      "profilePicture": "https://www.w3schools.com/w3images/avatar2.png",
+      "createdAt": "2024-11-25",
+      "basket": [
+        {
+          "productId": 1,
+          "quantity": 2
+        },
+        {
+          "productId": 2,
+          "quantity": 1
+        }
+      ],
+      "favorites": [
+        {
+          "productId": 3
+        },
+        {
+          "productId": 1
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "2",
+      "name": "Smartphone Plus",
+      "description": "Flagship smartphone with all the latest features.",
+      "price": 899.99,
+      "stock": 50,
+      "discount": 10,
+      "categoryId": 3,
+      "image": "https://aztechshop.az/image/cache/catalog/ASUS%20Ultrabuklar/ASUS_Vivobook_Pro_15_OLED_K6502Z_Quiet_blue%20(5)Sayt-1000x832.png",
+      "createdAt": "2024-11-21"
+    },
+    {
+      "id": "5",
+      "name": "Smartwatch Ultra",
+      "description": "Advanced smartwatch with fitness tracking and notifications.",
+      "price": 299.99,
+      "stock": 75,
+      "discount": 20,
+      "categoryId": 3,
+      "image": "https://m.media-amazon.com/images/I/61qpQ7ZsSmL.jpg",
+      "createdAt": "2024-11-19"
+    },
+    {
+      "id": "6",
+      "name": "4K Television",
+      "description": "Ultra HD 4K television with vivid colors and clarity.",
+      "price": 899.99,
+      "stock": 25,
+      "discount": 25,
+      "categoryId": 2,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjP8DkMLCYtsik1DGnIEXZrjN7uyEhc9QH2Q&s",
+      "createdAt": "2024-11-18"
+    },
+    {
+      "id": "7",
+      "name": "Bluetooth Speaker",
+      "description": "Portable Bluetooth speaker with powerful sound.",
+      "price": 129.99,
+      "stock": 120,
+      "discount": 10,
+      "categoryId": 4,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3N1zCEZ6dreXpVUWnFAziIuCOXWlMEWhGyQ&s",
+      "createdAt": "2024-11-17"
+    },
+    {
+      "id": "8",
+      "name": "Laptop Pro 15",
+      "description": "High-performance laptop with Intel i7 and 16GB RAM.",
+      "price": 1499.99,
+      "stock": 30,
+      "discount": 5,
+      "categoryId": 1,
+      "image": "https://eoleaf.com/cdn/shop/files/AEROPRO40-ENV4.jpg?v=1703077777",
+      "createdAt": "2024-11-16"
+    },
+    {
+      "id": "9",
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse for precision and comfort.",
+      "price": 49.99,
+      "stock": 200,
+      "discount": 15,
+      "categoryId": 4,
+      "image": "https://cdn.pixabay.com/photo/2016/04/07/15/55/mouse-1310133_960_720.jpg",
+      "createdAt": "2024-11-15"
+    },
+    {
+      "id": "10",
+      "name": "Smart Fridge",
+      "description": "Smart refrigerator with AI features.",
+      "price": 2599.99,
+      "stock": 10,
+      "discount": 30,
+      "categoryId": 2,
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nytimes.com%2Fwirecutter%2Freviews%2Fbest-smart-led-light-bulbs%2F&psig=AOvVaw0XHjHI-Zmd4WnsZMqYphwq&ust=1732716559506000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPDyx6mW-okDFQAAAAAdAAAAABAE",
+      "createdAt": "2024-11-14"
+    },
+    {
+      "id": "11",
+      "name": "Electric Scooter",
+      "description": "Eco-friendly electric scooter for urban commuting.",
+      "price": 799.99,
+      "stock": 50,
+      "discount": 15,
+      "categoryId": 3,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVNa95lT8al4lXm6BO5mwvTdWfhUMMsLUybQ&s",
+      "createdAt": "2024-11-13"
+    },
+    {
+      "id": "12",
+      "name": "Air Purifier",
+      "description": "Advanced air purifier for healthier living.",
+      "price": 349.99,
+      "stock": 30,
+      "discount": 10,
+      "categoryId": 2,
+      "image": "https://cdn.pixabay.com/photo/2019/09/03/08/56/air-purifier-4457030_960_720.jpg",
+      "createdAt": "2024-11-12"
+    },
+    {
+      "id": "13",
+      "name": "Smart Light Bulb",
+      "description": "Smart light bulb with adjustable brightness and color.",
+      "price": 59.99,
+      "stock": 150,
+      "discount": 5,
+      "categoryId": 4,
+      "image": "https://cdn.pixabay.com/photo/2017/12/06/14/38/lightbulb-3008617_960_720.jpg",
+      "createdAt": "2024-11-11"
+    },
+    {
+      "id": "14",
+      "name": "Gaming Chair",
+      "description": "Ergonomic gaming chair for long hours of comfort.",
+      "price": 249.99,
+      "stock": 70,
+      "discount": 15,
+      "categoryId": 4,
+      "image": "https://cdn.pixabay.com/photo/2018/09/26/16/11/gaming-chair-3709022_960_720.jpg",
+      "createdAt": "2024-11-10"
+    },
+    {
+      "id": "15",
+      "name": "Smart TV",
+      "description": "LED Smart TV with 60-inch display and 4K resolution.",
+      "price": 799.99,
+      "stock": 40,
+      "discount": 20,
+      "categoryId": 2,
+      "image": "https://cdn.pixabay.com/photo/2020/10/10/09/58/television-5638811_960_720.jpg",
+      "createdAt": "2024-11-09"
+    },
+    {
+      "id": "16",
+      "name": "Fitness Tracker",
+      "description": "Waterproof fitness tracker with heart rate monitor.",
+      "price": 99.99,
+      "stock": 150,
+      "discount": 10,
+      "categoryId": 3,
+      "image": "https://cdn.pixabay.com/photo/2019/10/11/10/45/fitness-tracker-4532510_960_720.jpg",
+      "createdAt": "2024-11-08"
+    },
+    {
+      "id": "17",
+      "name": "VR Headset",
+      "description": "Virtual reality headset for immersive experiences.",
+      "price": 399.99,
+      "stock": 25,
+      "discount": 20,
+      "categoryId": 1,
+      "image": "https://cdn.pixabay.com/photo/2017/11/02/08/37/virtual-reality-2921313_960_720.jpg",
+      "createdAt": "2024-11-07"
+    },
+    {
+      "id": "a436",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPy4QWtfglbm7rI4dSi6dvh4n8ZExI828MA&s",
+      "name": "Elcan",
+      "price": "2000",
+      "description": "Desc",
+      "stock": "6"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Laptops",
+      "createdAt": "2024-11-25"
+    },
+    {
+      "id": "2",
+      "name": "Smartphones",
+      "createdAt": "2024-11-25"
+    },
+    {
+      "id": "3",
+      "name": "Wearables",
+      "createdAt": "2024-11-25"
+    },
+    {
+      "id": "4",
+      "name": "Accessories",
+      "createdAt": "2024-11-25"
+    }
+  ]
+}
