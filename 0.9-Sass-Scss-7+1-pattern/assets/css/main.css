@@ -553,7 +553,8 @@ header .header .menu {
 }
 #banner .banner .contentbottom {
   display: flex;
-  column-gap: 15px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
   margin-top: 70px;
 }
 
