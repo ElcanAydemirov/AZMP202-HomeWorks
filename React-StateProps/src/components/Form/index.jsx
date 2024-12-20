@@ -1,45 +1,42 @@
-import React from 'react'
-import './index.css'
-import { nanoid } from 'nanoid'
+import React from 'react';
+import './index.css';
+import { nanoid } from 'nanoid';
 import Swal from 'sweetalert2';
 
-
-const Form = ({cName,btnName,setInput,setData,data}) => {
-  
-  return (<>
-    <form action="" className='form' onSubmit={
-      (e) => {
-        e.preventDefault()
+const Form = ({ btnName, setData, data }) => {
+  return (
+    <form
+      className="form"
+      onSubmit={(e) => {
+        e.preventDefault();
         const inputValue = e.target.firstChild.value.trim();
-        if (inputValue == "") {
+        if (inputValue === '') {
           Swal.fire({
             icon: "error",
-            title: "Inputlari doldurun",
-            text: "Inputlari doldurun",
-            footer: '<a href="#">Why do I have this issue?</a>'
+            title: "Input is empty!",
+            text: "Please enter a task.",
           });
-          return
+          return;
         }
-        const obj = {
-          id:nanoid(),
-          value: inputValue
-        }
-        console.log(obj);      
-       setData([...data,obj]);
 
-       Swal.fire({
-        title: "Added Succesfully",
-        icon: "success",
-        draggable: true
-      });
-       e.target.reset()
-      }
-    }>
-      <input type="text" placeholder='task'/>
-      <button type='submit' className={cName}>{btnName}</button>
+        const newTask = {
+          id: nanoid(),
+          value: inputValue,
+          isCompleted: false,
+        };
+
+        setData([...data, newTask]);
+        Swal.fire({
+          title: "Task Added!",
+          icon: "success",
+        });
+        e.target.reset();
+      }}
+    >
+      <input type="text" placeholder="Enter task..." />
+      <button type="submit" className="btn add">{btnName}</button>
     </form>
-    </>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;
