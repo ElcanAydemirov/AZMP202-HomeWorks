@@ -1,15 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Form from './components/Form';
 import List from './components/List';
 import Button from './components/Button';
+import SearchBar from './components/searchbar';
 
 function App() {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem('tasks'));
+    if (savedData) setData(savedData);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(data));
+  }, [data]);
 
   return (
     <>
+      <SearchBar
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        data={data}
+        setFilteredData={setFilteredData}
+      />
       <Form btnName={"Add"} setData={setData} data={data} />
       <hr />
       <div className="btns">
@@ -41,9 +58,10 @@ function App() {
       </div>
       <div className="list">
         <List
-          data={filteredData.length > 0 ? filteredData : data}
+          data={filteredData.length > 0 || searchQuery ? filteredData : data}
           setData={setData}
         />
+
       </div>
     </>
   );
