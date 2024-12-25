@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './index.module.scss';
 import { NavLink } from 'react-router-dom';
 import { IoMenu } from "react-icons/io5";
+import pimage from '../../../assets/images/portfolio-logo-png-transparent.png'
 
 const Header = () => {
     function sideBar() {
@@ -13,7 +14,7 @@ const Header = () => {
                 <div className={styles.container}>
                     <div className={styles.navbar}>
                         <div className={styles.logo}>
-                            Eljan Aydamirov
+                            <img src={pimage} className={styles.img} alt="" />
                         </div>
                         <nav>
                             <IoMenu className={styles.menu} onClick={sideBar} />
@@ -30,6 +31,9 @@ const Header = () => {
                                 </li>
                                 <li>
                                     <NavLink to="/contact">Contact</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/blog">Blog</NavLink>
                                 </li>
                             </ul>
                         </nav>

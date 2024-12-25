@@ -1,0 +1,39 @@
+.aboutSection {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .learnMoreBtn {
+    padding: 0.8rem 2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  
+  .aboutImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  

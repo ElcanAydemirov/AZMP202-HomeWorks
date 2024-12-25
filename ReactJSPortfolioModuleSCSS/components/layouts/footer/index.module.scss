@@ -1,0 +1,42 @@
+#footer {
+    background-color: #4240a3;
+    padding: 2rem 0;
+    color: white;
+  
+    .footerContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+  
+      .footerHeading {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+  
+      .footerText {
+        font-size: 1rem;
+        margin-top: 1rem;
+      }
+  
+      .footerLogo {
+        text-align: center;
+  
+        img {
+          max-width: 150px;
+          margin-top: 1rem;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .footerContent {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .footerLogo img {
+        width: 120px;
+      }
+    }
+  }
