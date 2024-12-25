@@ -2,9 +2,13 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import styles from './index.module.scss';
+import Header from '../../../components/layouts/client/header';
+import Footer from '../../../components/layouts/client/footer';
 
 const Contact = () => {
   return (
+    <>
+    <Header/>
     <section className={styles.contactSection}>
       <Container>
         <Row className="justify-content-center">
@@ -37,6 +41,8 @@ const Contact = () => {
         </Row>
       </Container>
     </section>
+    <Footer/>
+    </>
   );
 };
 

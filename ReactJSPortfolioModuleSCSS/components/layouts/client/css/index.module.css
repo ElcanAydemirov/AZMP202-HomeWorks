@@ -1,0 +1,66 @@
+header {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: white;
+  border-bottom: 1px solid black;
+}
+@media (max-width: 1200px) {
+  header {
+    padding: 0 2rem;
+  }
+}
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header .container .navbar {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .navbar .sidebar {
+  height: 300px;
+  width: 100%;
+  background-color: #111111;
+  display: none;
+}
+header .container .navbar .logo img {
+  width: 150px;
+}
+header .container .navbar nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container .navbar nav .menu {
+  display: none;
+  font-size: 1.5rem;
+  color: black;
+}
+@media (max-width: 768px) {
+  header .container .navbar nav .menu {
+    display: block;
+  }
+}
+header .container .navbar nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  header .container .navbar nav ul {
+    display: none;
+  }
+}
+header .container .navbar nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container .navbar nav ul li a {
+  color: black;
+  font-size: 1.1rem;
+  text-decoration: none;
+}/*# sourceMappingURL=index.module.css.map */

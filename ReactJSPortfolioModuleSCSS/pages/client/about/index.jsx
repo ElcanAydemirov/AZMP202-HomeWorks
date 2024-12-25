@@ -2,9 +2,13 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './index.module.scss';
 import logo from '../../../assets/images/istockphoto-520860375-612x612-removebg-preview.png';
+import Header from '../../../components/layouts/client/header';
+import Footer from '../../../components/layouts/client/footer';
 
 export const About = () => {
   return (
+    <>
+        <Header/>
     <section className={styles.aboutSection}>
       <Container>
         <Row className="align-items-center">
@@ -27,5 +31,7 @@ export const About = () => {
         </Row>
       </Container>
     </section>
+    <Footer/>
+    </>
   );
 };

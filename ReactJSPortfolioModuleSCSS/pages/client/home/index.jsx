@@ -4,10 +4,13 @@ import styles from './index.module.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import photo from '../../../assets/images/istockphoto-520860375-612x612-removebg-preview.png'
 import codeacademy from '../../../assets/images/logo-footerr.png'
+import Header from '../../../components/layouts/client/header';
+import Footer from '../../../components/layouts/client/footer';
 
 const Home = () => {
   return (
     <>
+    <Header/>
     <section id={styles.banner}>
     <Container>
       <Row className={styles.banner}>
@@ -40,6 +43,7 @@ const Home = () => {
             </Row>
         </Container>
     </section>
+    <Footer/>
     </>
   );
 };

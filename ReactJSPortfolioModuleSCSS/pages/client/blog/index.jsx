@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Header from '../../../components/layouts/client/header';
+import Footer from '../../../components/layouts/client/footer';
 
 const Blog = () => {
   const blogs = [
@@ -10,6 +12,9 @@ const Blog = () => {
 
   return (
     <>
+        <Header/>
+
+
       <h1>Blog</h1>
       <ul>
         {blogs.map((blog) => (
@@ -18,6 +23,7 @@ const Blog = () => {
           </li>
         ))}
       </ul>
+      <Footer/>
     </>
   );
 };
