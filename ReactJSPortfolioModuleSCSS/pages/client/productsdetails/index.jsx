@@ -5,7 +5,7 @@ import { controller } from '../../../services/constants';
 import { getDataById } from '../../../services/helpers';
 
 const ProductDetails = () => {
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();  
 
@@ -17,9 +17,9 @@ const ProductDetails = () => {
     try {
       const res = await getDataById(controller.Products, id);
       setProduct(res);
-      console.log('Fetched product:', res);
+      console.log(res);
     } catch (error) {
-      console.error('Error fetching product details:', error);
+      console.error(error);
     }
   };
 
@@ -28,11 +28,11 @@ const ProductDetails = () => {
   }, [id]);
 
   useEffect(() => {
-    console.log('Updated product state:', product);
+    console.log(product);
   }, [product]);
 
-  if (Object.keys(product).length === 0) {
-    return <h1>Product not found or loading...</h1>;
+  if (product.length === 0) {
+    return <h1>Product loading...</h1>;
   }
 
   return (
@@ -44,7 +44,6 @@ const ProductDetails = () => {
         id={product.id}
       />
       <button onClick={goBack}>Go Back</button> 
-
       <h1>salam</h1>
     </>
   );
