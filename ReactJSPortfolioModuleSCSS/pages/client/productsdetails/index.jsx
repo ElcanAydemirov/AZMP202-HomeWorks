@@ -41,7 +41,7 @@ const ProductDetails = () => {
         title={product.title}
         image={product.image}
         description={product.description}
-        id={id}
+        id={product.id}
       />
       <button onClick={goBack}>Go Back</button> 
 

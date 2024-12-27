@@ -33,6 +33,7 @@ const Products = () => {
               {products.length > 0 && products.map((p) => (
                 <Col xs={3} style={{margin:"1rem 0"}}>
                 <ProductCard
+                   id={p.id}
                   key={p.id} 
                   title={p.title.slice(0,12)}
                   price={p.price}
