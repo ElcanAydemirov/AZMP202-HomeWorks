@@ -14,16 +14,13 @@ import AdminUsers from '../pages/admin/users';
 import AdminHeader from '../components/layouts/admin/header';
 import AdminBlog from '../pages/admin/blog';
 import NotFound from '../pages/notfound';
+import Products from '../pages/client/products';
+import ProductDetails from '../pages/client/productsdetails';
 
 
 function App() {
   return (
     <>
-
-
-
-
-
       <Routes>
 
       <Route path='/admin' >
@@ -37,6 +34,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetails />} /> 
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
       <Route />
       <Route path='*' element={<NotFound/>}/>
       </Routes>
