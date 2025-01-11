@@ -16,14 +16,19 @@
                 <tr>
                     <th>#</th>
                     <th>Product</th>
-                    <th>Price</th>
+                    <th>Price ($)</th>
+                    <th>Quantity</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody id="basketTableBody">
-                <!-- Basket items will be rendered dynamically -->
+                
             </tbody>
         </table>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h4>Total Price: $<span id="totalPrice">0.00</span></h4>
+        </div>
     </div>
 
     <script src="./assets/js/basket.js" type="module"></script>

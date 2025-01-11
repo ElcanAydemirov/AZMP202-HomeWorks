@@ -4,30 +4,25 @@ const form = document.querySelector("form");
 const nameOrEmail = document.querySelector(".nameOrEmail");
 const password = document.querySelector(".password");
 
-let users = getData("users") || [];
+let istifadeciler = getData("users") || [];
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // Inputların boş olub-olmadığını yoxlayırıq
-  if (!nameOrEmail.value.trim() || !password.value.trim()) {
-    alert("Fields cannot be empty!");
-    return;
-  }
+    const istifadeci = istifadeciler.find(
+        (istifadeci) =>
+            (istifadeci.ad === nameOrEmail.value || istifadeci.email === nameOrEmail.value) &&
+            istifadeci.parol === password.value
+    );
 
-  // İstifadəçinin mövcud olub-olmadığını yoxlayırıq
-  const user = users.find(
-    (u) =>
-      (nameOrEmail.value === u.email || nameOrEmail.value === u.name) &&
-      password.value === u.password
-  );
+    if (!istifadeci) {
+        alert("inputlardan hansininsa deyeri sehvdi!");
+        return;
+    }
 
-  if (user) {
-    user.isLogged = true; // İstifadəçini logged olaraq işarələyirik
-    setData("users", users); // Dəyişikliyi localStorage-də saxlayırıq
-    alert(`Welcome back, ${user.name}!`);
-    location.replace("index.html"); // Ana səhifəyə yönləndiririk
-  } else {
-    alert("Incorrect username/email or password.");
-  }
+    istifadeci.girilib = true;
+    setData("users", istifadeciler);
+
+    alert("Sisteme ugurla daxil oldunuz");
+    location.replace("index.html");
 });

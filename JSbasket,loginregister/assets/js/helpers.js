@@ -1,6 +1,6 @@
-export function setData(key,arr) {
-    localStorage.setItem(key,JSON.stringify(arr));
+export function setData(aciq, melumatlar) {
+    localStorage.setItem(aciq, JSON.stringify(melumatlar));
 }
-export function getData(key) {
-   return JSON.parse(localStorage.getItem(key))
+export function getData(aciq) {
+    return JSON.parse(localStorage.getItem(aciq));
 }

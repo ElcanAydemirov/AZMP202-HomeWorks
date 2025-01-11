@@ -1,47 +1,40 @@
 import { getData, setData } from "./helpers.js";
 import { products } from "./data.js";
 
-// Navbar dinamikası
 const users = getData("users") || [];
-const loggedUser = users.find((user) => user.isLogged);
+const loggedInUser = users.find((user) => user.girilib);
+const productsContainer = document.getElementById("productsContainer");
+const userDropdown = document.getElementById("dropdownMenu");
+const basketCountElement = document.getElementById("basketItemCount");
 
-// Navbar elementləri
-const userDropdown = document.getElementById("userDropdown");
-const dropdownMenu = document.getElementById("dropdownMenu");
-const basketLink = document.getElementById("basketLink");
+function updateUserNavbar() {
+    const userLink = document.getElementById("userDropdown");
 
-// Əgər istifadəçi daxil olubsa, adı və "Log Out" seçimləri göstərilsin
-if (loggedUser) {
-    const userName = loggedUser.name;
-    userDropdown.querySelector("a").textContent = userName;  // Username göstərilsin
-    dropdownMenu.innerHTML = `
-        <li><a class="dropdown-item" href="#">${userName}</a></li>
-        <li><a class="dropdown-item" href="#" id="logout">Log Out</a></li>
-    `;
+    if (loggedInUser) {
+        userLink.innerHTML = `
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ${loggedInUser.ad}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                <li><a class="dropdown-item" href="#" id="logout">Logout</a></li>
+            </ul>
+        `;
 
-    // "Log Out" funksiyası
-    document.getElementById("logout").addEventListener("click", () => {
-        loggedUser.isLogged = false;
-        setData("users", users);
-        alert("You have logged out successfully!");
-        location.reload(); // səhifəni yeniləyərək navbarı yeniləyəcək
-    });
+        document.getElementById("logout").addEventListener("click", () => {
+            loggedInUser.girilib = false;
+            setData("users", users);
+            alert("Ugurla cixis etdiniz.");
+            location.replace("login.html"); 
+        });
 
-    // Basket linki görünməli olacaq
-    basketLink.style.display = 'block';
-} else {
-    // İstifadəçi daxil olmayıbsa, "Login" və "Sign Up" göstərilsin
-    dropdownMenu.innerHTML = `
-        <li><a class="dropdown-item" href="login.html">Login</a></li>
-        <li><a class="dropdown-item" href="register.html">Sign Up</a></li>
-    `;
-
-    // Basket linki gizlədilsin
-    basketLink.style.display = 'none';
+    } else {
+        userLink.innerHTML = `
+            <a class="nav-link" href="login.html">User</a>
+        `;
+    }
 }
 
-// Məhsulların əlavə edilməsi (Artıq data.js-dən import edilir)
-const productsContainer = document.getElementById("productsContainer");
 products.forEach((product) => {
     const productDiv = document.createElement("div");
     productDiv.classList.add("col-md-4");
@@ -52,14 +45,13 @@ products.forEach((product) => {
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">${product.description}</p>
                 <p><strong>$${product.price.toFixed(2)}</strong></p>
-                <button class="btn btn-primary add-to-basket" data-id="${product.id}">Add to Basket</button>
+                <button class="btn btn-primary add-to-basket" data-id="${product.id}">Sebete Əlavə Et</button>
             </div>
         </div>
     `;
     productsContainer.appendChild(productDiv);
 });
 
-// Basketə məhsul əlavə etmək funksiyası
 const addToBasketButtons = document.querySelectorAll(".add-to-basket");
 
 addToBasketButtons.forEach((button) => {
@@ -67,15 +59,42 @@ addToBasketButtons.forEach((button) => {
         const productId = parseInt(e.target.dataset.id);
         const product = products.find((prod) => prod.id === productId);
 
-        if (!loggedUser) {
-            alert("Please log in to add items to the basket.");
+        if (!loggedInUser) {
+            alert("Sebete əlavə etmək üçün daxil olun.");
             location.replace("login.html");
             return;
         }
-
-        loggedUser.basket.push(product);
-        setData("users", users);
-
-        alert(`${product.title} has been added to your basket.`);
+        addToBasket(product);
+        alert(`${product.title} - elave olundu`);
+        updateNavbarItemCount();
     });
 });
+
+function addToBasket(product) {
+    let existingProductIndex = loggedInUser.sebet.findIndex(
+        (p) => p.id === product.id
+    );
+
+    if (existingProductIndex > -1) {
+        loggedInUser.sebet[existingProductIndex].quantity += 1;
+    } else {
+        loggedInUser.sebet.push({ ...product, quantity: 1 });
+    }
+
+    setData("users", users);
+}
+
+function updateNavbarItemCount() {
+    let totalItems = 0;
+    if (loggedInUser && loggedInUser.sebet) {
+        loggedInUser.sebet.forEach(product => {
+            totalItems += product.quantity;
+        });
+    }
+    if (basketCountElement) {
+        basketCountElement.textContent = totalItems;
+    }
+}
+
+updateUserNavbar();
+updateNavbarItemCount();

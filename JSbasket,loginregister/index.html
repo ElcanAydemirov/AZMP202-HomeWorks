@@ -6,34 +6,31 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Məhsul kartlarının eni və hündürlüyü */
         .card {
-            height: 300px; /* Hündürlüyü 300px olaraq təyin edirik */
-            width: 100%; /* Enini %100 olaraq təyin edirik, əgər container genişlənərsə kartlar genişlənəcək */
+            height: 100%; 
             display: flex;
             flex-direction: column;
-            margin: 10px; /* Kartlar arasındakı boşluq */
+            margin: 10px;
         }
 
         .card img {
-            height: 150px; /* Şəkil üçün hündürlük */
-            width: 100%; /* Şəkil kartın eninə uyğun genişlənəcək */
-            object-fit: cover; /* Şəkil kartın ölçüsünə uyğun şəkildə kəsilsin */
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
         }
 
         .card-body {
-            flex-grow: 1; /* Bütün boşluğu alacaq və içindəki məzmunu düzəcək */
-            overflow: hidden; /* İçindəki məzmunun kartın ölçüsünü aşmaması üçün */
+            flex-grow: 1;
+            overflow: hidden;
         }
 
-        /* Məhsulların yerleşməsi */
         .product-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Kartları 4-4 ilə, geniş ekranlarda isə avtomatik yerleşdirir */
+            display: flex;
+            flex-wrap: wrap; 
             gap: 20px;
+            justify-content: space-between; 
         }
 
-        /* Başlıq və digər məzmun */
         .card-title, .card-text {
             text-overflow: ellipsis;
             overflow: hidden;
@@ -52,12 +49,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown" id="userDropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">User</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">User</a>
                         <ul class="dropdown-menu" id="dropdownMenu" aria-labelledby="navbarDropdownMenuLink"></ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="basket.html" id="basketLink">Basket</a>
+                        <a class="nav-link" href="basket.html" id="basketLink">
+                            Basket <sup id="basketItemCount">0</sup>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -65,9 +63,7 @@
     </nav>
 
     <div class="container mt-4" id="productsContainer">
-        <div class="product-container" id="productsContainer">
-            <!-- Məhsullar buraya əlavə olunacaq -->
-        </div>
+        <div class="product-container" id="productsContainer"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -6,16 +6,16 @@ const email = document.querySelector(".email");
 const password = document.querySelector(".password");
 const confirmPassword = document.querySelector(".confirm-password");
 
-let users = getData("users") || [];
+let istifadeciler = getData("users") || [];
 
-class User {
-    constructor(name, email, password) {
+class Istifadeci {
+    constructor(ad, email, parol) {
         this.id = Date.now();
-        this.name = name;
+        this.ad = ad;
         this.email = email;
-        this.password = password;
-        this.isLogged = false;
-        this.basket = [];
+        this.parol = parol;
+        this.girilib = false;
+        this.sebet = [];
     }
 }
 
@@ -23,25 +23,25 @@ formRegister.addEventListener("submit", (e) => {
     e.preventDefault();
 
     if (!userName.value.trim() || !email.value.trim() || !password.value.trim() || !confirmPassword.value.trim()) {
-        alert("All fields are required!");
+        alert("Bütün inputlar doldurulmalidir!");
         return;
     }
 
     if (password.value !== confirmPassword.value) {
-        alert("Passwords do not match!");
+        alert("Parollar eyni deyil!");
         return;
     }
 
-    if (users.some((user) => user.email === email.value)) {
-        alert("This email is already in use!");
+    if (istifadeciler.some((istifadeci) => istifadeci.email === email.value)) {
+        alert("Bu e-poçt artiq istifadə edilir!");
         return;
     }
 
-    const newUser = new User(userName.value, email.value, password.value);
-    users.push(newUser);
-    setData("users", users);
+    const yeniIstifadeci = new Istifadeci(userName.value, email.value, password.value);
+    istifadeciler.push(yeniIstifadeci);
+    setData("users", istifadeciler);
 
-    alert("Registration successful!");
+    alert("Qeydiyyat olundun!");
     formRegister.reset();
     location.replace("login.html");
 });

@@ -1,4 +1,3 @@
-// Elementlər yaratmaq
 const container = document.createElement("div");
 const increaseBtn = document.createElement("button");
 const decreaseBtn = document.createElement("button");
