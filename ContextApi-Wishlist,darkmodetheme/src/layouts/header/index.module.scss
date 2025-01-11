@@ -1,0 +1,35 @@
+header{
+    background-color: black;
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+        color: white
+        ;
+        nav{
+            ul{
+                display: flex;
+                justify-content: center;
+                gap: 17px;
+                font-size: 19px;
+                li{
+                    list-style: none;    
+                    text-decoration: none;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        span{
+                            position: absolute;
+                            color: red;
+                            top: 10px;
+                            font-size: 17px;
+                            right: 3px;
+                        }
+                    }
+                }    
+            }
+        }
+    }
+}
