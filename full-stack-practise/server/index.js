@@ -1,94 +1,24 @@
 const mongoose = require("mongoose");
 const express = require("express");
-const cors = require("cors");
 const app = express();
-const { Schema, model } = mongoose;
-
+const cors = require('cors');
+const { getAll, getById, deleteById, editWithPut, post } = require("./controllers/productControllers");
 const PORT = 3000;
+const { Schema, model } = mongoose;
+const productRouter = require("./routes/productRoutes")
 
 app.use(cors());
 app.use(express.json());
 
-const productSchema = new Schema({
-    title: { type: String, required: true },
-    description: { type: String, required: true },
-    price: { type: Number, required: true },
-});
-
-const Product = model("Product", productSchema);
-
-mongoose
-    .connect("mongodb+srv://elcansaazmp202:bx1.2005@cluster0.83ybn.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0", {
-
-    })
-    .then(() => {
-        app.listen(PORT, () => {
-            console.log(`http://localhost:${PORT}`);
-        });
-    })
-    .catch((err) => {
-        console.error(err);
+mongoose.connect("mongodb+srv://elcansaazmp202:bx1.2005@cluster0.83ybn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+}).then(() => {
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
     });
-
-app.get("/api/products", async(req, res) => {
-    console.log(Product);
-    const products = await Product.find({})
-    res.status(200).send(products)
+}).catch((err) => {
+    console.error("Error connecting to MongoDB:", err.message);
 });
 
-app.get("/api/products/:id", async(req, res) => {
-    const {id} = req.params
-    const product = await Product.findById(id)
-    if (product) {
-        res.status(200).send(product)
-        return
-    }
-    res.status(500).send({
-        message:"error"
-    })
-});
-
-app.delete("/api/products/:id", async(req, res) => {
-    const {id} = req.params
-    const product = await Product.findByIdAndDelete(id)
-    const products = await Product.find({})
-    if (product) {
-        res.status(200).send({
-            deletedProduct:product,
-            allProducts:products
-        }
-        )
-        return
-    }
-    res.status(500).send({
-        message:"error"
-    })
-});
+app.use('/api/products', productRouter);
 
 
-app.post("/api/products", async(req, res) => {
-    const product = await Product.findByIdAndDelete(id)
-    if (product) {
-        res.status(200).send({
-            deletedProduct:product,
-            allProducts:products
-        }
-        )
-        return
-    }
-    res.status(500).send({
-        message:"error"
-    })
-});
-
-// app.get("/api", (req, res) => {
-//     res.send("API is working!");
-// });
-
-// app.get("/api", (req, res) => {
-//     res.send("API is working!");
-// });
-
-// app.get("/api", (req, res) => {
-//     res.send("API is working!");
-// });

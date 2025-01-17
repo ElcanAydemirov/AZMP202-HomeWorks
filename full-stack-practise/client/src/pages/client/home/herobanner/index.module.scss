@@ -1,0 +1,35 @@
+#herobanner {
+    background-color: #F6214B;
+    // margin-top: 2rem;
+    padding: 6rem 2rem;
+
+    .classherobanner {
+        @media (max-width:640px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heroleft {
+
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+
+            h1 {
+                color: white;
+                font-size: 3rem;
+            }
+
+            h3 {
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+
+        .heroimage {
+            width: 100%;
+        }
+    }
+}
